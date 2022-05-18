@@ -6,13 +6,13 @@
 /*   By: fmoreira <fmoreira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 19:25:47 by fmoreira          #+#    #+#             */
-/*   Updated: 2022/05/04 20:44:51 by fmoreira         ###   ########.fr       */
+/*   Updated: 2022/05/18 16:55:05 by fmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_putnbr_fd(size_t n, int fd)
+void	ft_putnbr_fd(long long int n, int fd)
 {
 	size_t	i;
 

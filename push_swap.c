@@ -6,13 +6,13 @@
 /*   By: fmoreira <fmoreira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 16:12:32 by fmoreira          #+#    #+#             */
-/*   Updated: 2022/05/04 21:02:41 by fmoreira         ###   ########.fr       */
+/*   Updated: 2022/05/18 15:48:12 by fmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main(int arg, char **argv)
+int main(int argc, char **argv)
 {
 	int 	count;
 	int		ok;
@@ -20,7 +20,12 @@ int main(int arg, char **argv)
 	t_param	*list;
 	count = 1;
 	ok = 0;
-
+	
+	if (argc == 1)
+	{
+		ft_putstr_fd("No params\n", 1);
+		return (1);
+	}
 	list = ft_inialize_params();
 	while (ok == 0)
 	{
