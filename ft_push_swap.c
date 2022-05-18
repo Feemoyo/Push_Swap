@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_push_swap.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmoreira <fmoreira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 16:12:32 by fmoreira          #+#    #+#             */
-/*   Updated: 2022/05/18 15:48:12 by fmoreira         ###   ########.fr       */
+/*   Updated: 2022/05/18 20:37:48 by fmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int main(int argc, char **argv)
 	int 	count;
 	int		ok;
 	char	*str;
-	t_param	*list;
+	t_list	*list;
 	count = 1;
 	ok = 0;
 	
@@ -26,7 +26,9 @@ int main(int argc, char **argv)
 		ft_putstr_fd("No params\n", 1);
 		return (1);
 	}
-	list = ft_inialize_params();
+	printf("bbbbb\n");
+	ft_inialize_params(list);
+	printf("bbbbb\n");
 	while (ok == 0)
 	{
 		if(ft_isdifnbr(argv[count], list))
@@ -42,12 +44,6 @@ int main(int argc, char **argv)
 		}
 	}
 	ft_insert_value(list);
-	/*while (argv[count] != 0)
-	{
-		ft_putnbr_fd(ft_atoi(argv[count]), 1);
-		write(1, " ", 1);
-		count++;
-	}
-	write(1, "\n", 1);*/
+
 	return(0);
 }
