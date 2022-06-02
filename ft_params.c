@@ -6,13 +6,13 @@
 /*   By: fmoreira <fmoreira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 20:20:46 by fmoreira          #+#    #+#             */
-/*   Updated: 2022/05/18 20:42:20 by fmoreira         ###   ########.fr       */
+/*   Updated: 2022/06/02 20:12:19 by fmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_isdifnbr(const char *s, t_list *list)
+int	ft_isdifnbr(const unsigned char *s, t_list *list)
 {
 	int i;
 
@@ -33,8 +33,7 @@ void	ft_more_params(t_list *list, long long int param)
 	
 	aux = (t_param *)malloc(sizeof(t_param));
 	aux->value = param;
-	aux->next = list->param; //erro here
-		printf("aaaa\n");
+	aux->next = list->param;
 	list->param = aux;
 	list->size++;
 }
@@ -53,10 +52,9 @@ void	ft_insert_value(t_list *list)
 	aux = list;
 	while (aux->param != NULL)
 	{
-		//printf("socorro v4\n");
 		ft_putnbr_fd(aux->param->value, 1);
-		printf("info = %lld\n", aux->param->value);
 		write(1, "\n", 1);
 		aux->param = aux->param->next;
 	}
+	aux = list;
 }
