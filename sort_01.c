@@ -16,8 +16,7 @@ void	ft_ss(t_list *stack)
 {
 	long long int	aux;
 
-	printf("socorro1");
-	aux = stack_a->param->value;
-	stack_a->param->value = stack_a->param->next->value;
-	stack_a->param->next->value = aux; 
+	aux = stack->param->value;
+	stack->param->value = stack->param->next->value;
+	stack->param->next->value = aux; 
 }

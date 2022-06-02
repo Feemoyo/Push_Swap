@@ -42,10 +42,10 @@ int main(int argc, char **argv)
 			ok = 1;
 		}
 	}	
-	//printf("\n**** 1 passada ****");
-	//ft_insert_value(&stack_a);
-	//printf("\n**** 2 passada com sa ****\n");
-	ft_sa(&stack_a);
+	printf("\n**** 1 passada ****");
+	ft_insert_value(&stack_a);
+	printf("\n**** 2 passada com sa ****\n");
+	ft_ss(&stack_a);
 	
 	ft_insert_value(&stack_a);		// print stack_a
 	return(0);

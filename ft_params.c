@@ -47,14 +47,13 @@ void	ft_inialize_params(t_list *list)
 
 void	ft_insert_value(t_list *list)
 {
-	t_list	*aux;
+	t_param	*aux;
 
-	aux = list;
-	while (aux->param != NULL)
+	aux = list->param;
+	while (aux != NULL)
 	{
-		ft_putnbr_fd(aux->param->value, 1);
+		ft_putnbr_fd(aux->value, 1);
 		write(1, "\n", 1);
-		aux->param = aux->param->next;
+		aux = aux->next;
 	}
-	aux = list;
 }
