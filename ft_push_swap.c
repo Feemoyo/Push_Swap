@@ -6,7 +6,7 @@
 /*   By: fmoreira <fmoreira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 16:12:32 by fmoreira          #+#    #+#             */
-/*   Updated: 2022/06/02 19:46:30 by fmoreira         ###   ########.fr       */
+/*   Updated: 2022/06/02 23:51:12 by fmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,8 @@ int main(int argc, char **argv)
 			ok = 1;
 		}
 	}	
-	printf("\n**** 1 passada ****");
 	ft_insert_value(&stack_a);
-	printf("\n**** 2 passada com sa ****\n");
-	ft_ss(&stack_a);
+	printf("*****");
 	
 	ft_insert_value(&stack_a);		// print stack_a
 	return(0);
