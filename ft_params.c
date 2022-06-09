@@ -6,7 +6,7 @@
 /*   By: fmoreira <fmoreira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 20:20:46 by fmoreira          #+#    #+#             */
-/*   Updated: 2022/06/02 23:49:00 by fmoreira         ###   ########.fr       */
+/*   Updated: 2022/06/08 03:08:20 by fmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,12 @@ int	ft_isdifnbr(const unsigned char *s, t_list *list)
 
 void	ft_more_params(t_list *list, long long int param)
 {
-	t_param *aux;
+	t_param *new;
 	
-	aux = (t_param *)malloc(sizeof(t_param));
-	aux->value = param;
-	aux->next = list->param;
-	list->param = aux;
+	new = (t_param *)malloc(sizeof(t_param));
+	new->value = param;
+	new->next = list->param;
+	list->param = new;
 	list->size++;
 }
 

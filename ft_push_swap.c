@@ -6,7 +6,7 @@
 /*   By: fmoreira <fmoreira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 16:12:32 by fmoreira          #+#    #+#             */
-/*   Updated: 2022/06/02 23:51:12 by fmoreira         ###   ########.fr       */
+/*   Updated: 2022/06/08 02:45:32 by fmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,9 @@ int main(int argc, char **argv)
 		}
 	}	
 	ft_insert_value(&stack_a);
-	printf("*****");
 	
+	write(1, "*****\n", 6);
+	ft_rrx(&stack_a);
 	ft_insert_value(&stack_a);		// print stack_a
 	return(0);
 }
