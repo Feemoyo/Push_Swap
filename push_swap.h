@@ -6,7 +6,7 @@
 /*   By: fmoreira <fmoreira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 18:17:15 by fmoreira          #+#    #+#             */
-/*   Updated: 2022/06/08 02:45:23 by fmoreira         ###   ########.fr       */
+/*   Updated: 2022/06/10 17:46:36 by fmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,5 @@ void	ft_inialize_params(t_list *list);
 void	ft_insert_value(t_list *list);
 void	ft_ss(t_list *stack);
 void	ft_rrx(t_list *stack);
+void	ft_pp(t_list *stack_sender, t_list *stack_recipient);
 #endif
