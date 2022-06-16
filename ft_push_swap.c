@@ -6,7 +6,7 @@
 /*   By: fmoreira <fmoreira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 16:12:32 by fmoreira          #+#    #+#             */
-/*   Updated: 2022/06/10 17:46:04 by fmoreira         ###   ########.fr       */
+/*   Updated: 2022/06/16 23:51:14 by fmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 	ft_more_params(&stack_b, 8);
 	while (ok == 0)
 	{
-		if(ft_isdifnbr(argv[count], &stack_a))
+		if(ft_isdifnbr(argv[argc - count], &stack_a))
 		{
 			ft_putstr_fd("Error\n", 1);
 			exit(1);
@@ -44,10 +44,15 @@ int main(int argc, char **argv)
 			ok = 1;
 		}
 	}	
+	/*
 	ft_insert_value(&stack_a);
 	
 	write(1, "*****\n", 6);
-	ft_pp(&stack_b, &stack_a);
+	ft_px(&stack_b, &stack_a);
 	ft_insert_value(&stack_a);		// print stack_a
+	printf("\nstack_b->size: %lld\n", stack_b.size);
+	printf("\nstack_a->size: %lld\n", stack_a.size); //*/
 	return(0);
 }
+
+void	ft_socorro_deus(**argv,)
