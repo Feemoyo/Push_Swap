@@ -6,13 +6,13 @@
 /*   By: fmoreira <fmoreira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 20:20:46 by fmoreira          #+#    #+#             */
-/*   Updated: 2022/06/30 20:29:04 by fmoreira         ###   ########.fr       */
+/*   Updated: 2022/06/22 21:44:05 by fmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_isdifnbr(const char *s, t_list *list)
+int	ft_isdifnbr(const unsigned char *s, t_list *list)
 {
 	int i;
 
@@ -31,7 +31,7 @@ void	ft_more_params(t_list *list, long long int param)
 {
 	t_param *new;
 	
-	new = ft_node_format(new);
+	new = (t_param *)malloc(sizeof(t_param));
 	new->value = param;
 	new->next = list->param;
 	list->param = new;
@@ -51,7 +51,6 @@ void	ft_insert_value(t_list *list)
 {
 	t_param	*aux;
 
-	aux = ft_node_format(aux);
 	aux = list->param;
 	while (aux != NULL)
 	{
@@ -59,12 +58,4 @@ void	ft_insert_value(t_list *list)
 		write(1, "\n", 1);
 		aux = aux->next;
 	}
-}
-
-t_param *ft_node_format(t_param *node)
-{
-	node = (t_param *)malloc(sizeof(t_param));
-	if (!node)
-		exit(0); 
-	return (node);
 }

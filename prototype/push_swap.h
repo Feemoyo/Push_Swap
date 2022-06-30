@@ -6,7 +6,7 @@
 /*   By: fmoreira <fmoreira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 18:17:15 by fmoreira          #+#    #+#             */
-/*   Updated: 2022/07/01 00:06:31 by fmoreira         ###   ########.fr       */
+/*   Updated: 2022/06/22 21:47:07 by fmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,10 @@ int		ft_isalnum(int c);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putnbr_fd(long long int n, int fd);
 size_t	ft_strlen(const char *s);
-int		ft_isdifnbr(const char *s, t_list *param);
+int		ft_isdifnbr(const unsigned char *s, t_list *param);
 void	ft_more_params(t_list *helpme, long long int param);
 void	ft_inialize_params(t_list *list_a, t_list *list_b);
 void	ft_insert_value(t_list *list);
-t_param	*ft_node_format(t_param *node);
 void	ft_sx(t_list *stack);
 void	ft_px(t_list *stack_sender, t_list *stack_recipient);
 void	ft_rx(t_list *stack);
