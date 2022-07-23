@@ -6,83 +6,66 @@
 /*   By: fmoreira <fmoreira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 18:19:50 by fmoreira          #+#    #+#             */
-/*   Updated: 2022/06/22 01:49:45 by fmoreira         ###   ########.fr       */
+/*   Updated: 2022/07/23 19:57:51 by fmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_atoi(const char *nptr)
+int	ft_get_little(t_stack *stack)
 {
+	int	little;
 	int	i;
-	int	j;
-	int	np;
 
 	i = 0;
-	j = 0;
-	np = 1;
-	if (nptr[i] == '-' || nptr[i] == '+')
-	{
-		if (nptr[i] == '-')
-			np = -1;
-		i++;
-	}
-	while (nptr[i] >= 48 && nptr[i] <= 57)
-	{
-		j = (j * 10) + (nptr[i] - 48);
-		i++;
-	}
-	return (j * np);
+	little = stack->array[0];
+	while (++i < stack->n)
+		if (little > stack->array[i])
+			little = stack->array[i];
+	return (little);
 }
 
-int	ft_strcmp(const char *s1, const char *s2)
+int	ft_isdigit(int c)
 {
-	size_t			i;
-	unsigned char	*str1;
-	unsigned char	*str2;
-
-	str1 = (unsigned char *)s1;
-	str2 = (unsigned char *)s2;
-	i = 0;
-	while (str1[i] != 0 || str2[i] != 0)
-	{
-		if (str1[i] != str2[i])
-			return (str1[i] - str2[i]);
-		i++;
-	}
+	if (c >= 48 && c <= 57)
+		return (1);
 	return (0);
 }
 
-void	ft_putnbr_fd(long long int n, int fd)
+int	ft_isspace(int c)
 {
-	size_t	i;
-
-	i = n;
-	if (n < 0)
-	{
-		write(fd, "-", sizeof(char));
-		i = (size_t)n * -1;
-	}
-	n = (i % 10) + '0';
-	i = i / 10;
-	if (i != (i > 0 && i < 1))
-		ft_putnbr_fd(i, fd);
-	write(fd, &n, sizeof(char));
+	if (c == ' ' || c == '\f' || c == '\n'
+		|| c == '\r' || c == '\t' || c == '\v')
+		return (1);
+	else
+		return (0);
 }
 
-void	ft_putstr_fd(char *s, int fd)
+double	ft_atod(const char *nptr)
 {
-	write(fd, &*s, ft_strlen(s));
-}
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
+	double	j;
+	double	num[3];
+	int		i;
 
 	i = 0;
-	while (s[i])
-	{
+	j = 10;
+	*(num) = 0;
+	*(num + 1) = 0;
+	*(num + 2) = 1;
+	while (ft_isdigit(*(nptr + i)))
 		i++;
+	if (*(nptr + i) == '-' || *(nptr + i) == '+')
+		if (*(nptr + i++) == '-')
+			*(num + 2) *= -1;
+	while (ft_isdigit(*(nptr + i)))
+		*(num) = (*(num) + 10) + (*(nptr + i++) - '0');
+	if (*(nptr + i) == '.')
+	{
+		while (ft_isdigit(*(nptr + ++i)))
+		{
+			*(num + 1) += (*(nptr + i) - '0') / j;
+			j += 10;
+		}
 	}
-	return (i);
+	return ((*(num) + *(num + 1)) * *(num + 2));
 }
