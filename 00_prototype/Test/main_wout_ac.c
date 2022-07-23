@@ -6,7 +6,7 @@
 /*   By: fmoreira <fmoreira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 20:03:46 by fmoreira          #+#    #+#             */
-/*   Updated: 2022/05/18 16:51:29 by fmoreira         ###   ########.fr       */
+/*   Updated: 2022/07/21 22:17:27 by fmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-/*** Main Withou Argument Check ***/
+/*** Main Withouy Argument Check ***/
 
 typedef	struct	s_lista	// struct padrao que estou utilizando em todos os tests //
 {

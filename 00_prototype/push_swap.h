@@ -6,7 +6,7 @@
 /*   By: fmoreira <fmoreira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 18:17:15 by fmoreira          #+#    #+#             */
-/*   Updated: 2022/07/01 00:06:31 by fmoreira         ###   ########.fr       */
+/*   Updated: 2022/07/22 00:16:55 by fmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,6 @@ void	ft_sx(t_list *stack);
 void	ft_px(t_list *stack_sender, t_list *stack_recipient);
 void	ft_rx(t_list *stack);
 void	ft_rrx(t_list *stack);
+void	ft_find_biggest(t_list	*stack, int arg);
 
 #endif
