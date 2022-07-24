@@ -6,7 +6,7 @@
 /*   By: fmoreira <fmoreira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 20:13:47 by fmoreira          #+#    #+#             */
-/*   Updated: 2022/07/24 01:17:54 by fmoreira         ###   ########.fr       */
+/*   Updated: 2022/07/24 01:45:49 by fmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ static void	ft_move_back(t_stack *stack_a, t_stack *stack_b, int num)
 	ft_pm(stack_a, stack_a, 'a');
 }
 
-void	ft_medium_sort(t_stack *stack_a, t_stack *stack_a, int nb)
+void	ft_medium_sort(t_stack *stack_a, t_stack *stack_b, int nb)
 {
 	int	little;
 	int	range;

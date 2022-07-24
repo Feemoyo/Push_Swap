@@ -6,7 +6,7 @@
 /*   By: fmoreira <fmoreira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 19:49:31 by fmoreira          #+#    #+#             */
-/*   Updated: 2022/07/23 15:15:35 by fmoreira         ###   ########.fr       */
+/*   Updated: 2022/07/24 01:42:51 by fmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	ft_r_stack(t_stack *stack)
 	stack->array[i] = temp;
 }
 
-void	ft_rr_stack(stack *stack)
+void	ft_rr_stack(t_stack *stack)
 {
 	int	aux;
 	int	i;
