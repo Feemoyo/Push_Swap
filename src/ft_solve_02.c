@@ -6,7 +6,7 @@
 /*   By: fmoreira <fmoreira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 20:13:47 by fmoreira          #+#    #+#             */
-/*   Updated: 2022/07/24 01:45:49 by fmoreira         ###   ########.fr       */
+/*   Updated: 2022/07/24 03:10:41 by fmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	ft_medium_sort(t_stack *stack_a, t_stack *stack_b, int nb)
 	i = -1;
 	range = stack_a->n / nb;
 	little = ft_get_little(stack_a) - 1;
-	while (++1 < nb)
+	while (++i < nb)
 	{
 		j = 0;
 		while (j++ < range)

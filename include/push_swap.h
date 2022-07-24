@@ -6,7 +6,7 @@
 /*   By: fmoreira <fmoreira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 18:17:15 by fmoreira          #+#    #+#             */
-/*   Updated: 2022/07/24 03:07:49 by fmoreira         ###   ########.fr       */
+/*   Updated: 2022/07/24 03:13:05 by fmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ void	ft_micro_sort(t_stack *stack_a, t_stack *stack_b);
 void	ft_little_sort(t_stack *stack_a, t_stack *stack_b);
 void	ft_medium_sort(t_stack *stack_a, t_stack *stack_b, int nb);
 void	ft_big_sort(t_stack *stack_a, t_stack *stack_b, int ns, int nb);
+void	ft_medium_sort_inv(t_stack *stck_a, t_stack *stck_b, int nb, int init);
+
 int	ft_get_little(t_stack *stack);
 int	ft_isdigit(int c);
 int	ft_isspace(int c);
