@@ -6,7 +6,7 @@
 /*   By: fmoreira <fmoreira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 16:12:32 by fmoreira          #+#    #+#             */
-/*   Updated: 2022/07/24 02:28:25 by fmoreira         ###   ########.fr       */
+/*   Updated: 2022/07/24 16:55:56 by fmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,8 @@ int	main(int argc, char **argv)
 	t_stack	stack_b;
 
 	if (ft_init_stack(argc - 1, &stack_a, &stack_b))
-		ft_error(&stack_a, &stack_a, 0);
-	if (ft_check_args(argc, argv, &stack_a, &stack_a))
+		ft_error(&stack_a, &stack_b, 0);
+	if (ft_check_args(argc, argv, &stack_a, &stack_b))
 		ft_error(&stack_a, &stack_b, 1);
 	if (ft_check_stack(&stack_a))
 	{
@@ -62,7 +62,7 @@ int	main(int argc, char **argv)
 	if (stack_a.n <= 3)
 		ft_micro_sort(&stack_a, &stack_b);
 	else if (stack_a.n <= 14)
-		ft_little_sort(&stack_b, &stack_b);
+		ft_little_sort(&stack_a, &stack_b);
 	else if (stack_a.n <= 190)
 		ft_medium_sort(&stack_a, &stack_b, 6);
 	else

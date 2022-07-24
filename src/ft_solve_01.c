@@ -6,7 +6,7 @@
 /*   By: fmoreira <fmoreira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 20:13:08 by fmoreira          #+#    #+#             */
-/*   Updated: 2022/07/24 03:09:34 by fmoreira         ###   ########.fr       */
+/*   Updated: 2022/07/24 16:58:48 by fmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	ft_micro_sort(t_stack *stack_a, t_stack *stack_b)
 	{
 		if (stack_a->array[0] < stack_a->array[1])
 		{
-			ft_rrm(stack_a, stack_a, 'a');
+			ft_rrm(stack_a, stack_b, 'a');
 			if (stack_a->array[0] > stack_a->array[1])
 				ft_sm(stack_a, stack_b, 'a');
 		}
@@ -68,7 +68,7 @@ void	ft_little_sort(t_stack *stack_a, t_stack *stack_b)
 			while (j--)
 				ft_rm(stack_a, stack_b, 'a');
 		else
-			while (j++ < stack_b->n)
+			while (j++ < stack_a->n)
 				ft_rrm(stack_a, stack_b, 'a');
 		ft_pm(stack_a, stack_b, 'b');
 	}

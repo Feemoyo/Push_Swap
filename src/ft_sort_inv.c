@@ -6,7 +6,7 @@
 /*   By: fmoreira <fmoreira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 20:33:15 by fmoreira          #+#    #+#             */
-/*   Updated: 2022/07/24 01:33:09 by fmoreira         ###   ########.fr       */
+/*   Updated: 2022/07/24 18:59:26 by fmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ void	ft_medium_sort_inv(t_stack *stck_a, t_stack *stck_b, int nb, int init)
 	{
 		j = 0;
 		while (j++ < range)
-			ft_mov_blck_inv(stck_a, stck_a, little + i * range,
+			ft_mov_blck_inv(stck_a, stck_b, little + i * range,
 				little + (i + 1) * range);
 	}
 	i = little;

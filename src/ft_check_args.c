@@ -6,7 +6,7 @@
 /*   By: fmoreira <fmoreira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 20:20:46 by fmoreira          #+#    #+#             */
-/*   Updated: 2022/07/24 03:03:21 by fmoreira         ###   ########.fr       */
+/*   Updated: 2022/07/24 16:55:18 by fmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,14 @@ static int	ft_isnum(int n, char **str)
 
 static int	ft_isint(int n, char **str, t_stack *stack)
 {
-	long int	num;
-	int			i;
+	double	num;
+	int		i;
 
 	i = 0;
 	while (++i < n)
 	{
 		num = ft_atod(*(str + i));
-		if (num < INT_MIN || num > INT_MAX)
+		if (num < -2147483648 || num > 2147483647)
 			return (1);
 		stack->array[i - 1] = (int)num;
 	}
@@ -77,7 +77,7 @@ static void	ft_replace_nums(t_stack *stack_a, t_stack *stack_b)
 	{
 		j = -1;
 		count = 0;
-		while (++j < stack_b->n)
+		while (++j < stack_a->n)
 			if (stack_a->array[i] > stack_a->array[j])
 				count++;
 		stack_b->array[i] = count + 1;
@@ -87,6 +87,16 @@ static void	ft_replace_nums(t_stack *stack_a, t_stack *stack_b)
 		stack_a->array[i] = stack_b->array[i];
 }
 
+void	find_problem(t_stack *stack_a)
+{
+	int i;
+	
+	i = -1;
+	while (++i < stack_a->n)
+	{
+		printf("stack_a[%d]: %d\n", i, stack_a->array[i]);
+	}
+}
 int	ft_check_args(int n, char **args, t_stack *stack_a, t_stack *stack_b)
 {
 	if (ft_isnum(n, args))

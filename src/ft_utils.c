@@ -6,7 +6,7 @@
 /*   By: fmoreira <fmoreira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 18:19:50 by fmoreira          #+#    #+#             */
-/*   Updated: 2022/07/23 19:57:51 by fmoreira         ###   ########.fr       */
+/*   Updated: 2022/07/24 16:51:18 by fmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,22 +43,22 @@ int	ft_isspace(int c)
 
 double	ft_atod(const char *nptr)
 {
+	int		i;
 	double	j;
 	double	num[3];
-	int		i;
 
 	i = 0;
 	j = 10;
 	*(num) = 0;
 	*(num + 1) = 0;
 	*(num + 2) = 1;
-	while (ft_isdigit(*(nptr + i)))
+	while (ft_isspace(*(nptr + i)))
 		i++;
 	if (*(nptr + i) == '-' || *(nptr + i) == '+')
 		if (*(nptr + i++) == '-')
 			*(num + 2) *= -1;
 	while (ft_isdigit(*(nptr + i)))
-		*(num) = (*(num) + 10) + (*(nptr + i++) - '0');
+		*(num) = (*(num) * 10) + (*(nptr + i++) - '0');
 	if (*(nptr + i) == '.')
 	{
 		while (ft_isdigit(*(nptr + ++i)))

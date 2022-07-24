@@ -6,7 +6,7 @@
 /*   By: fmoreira <fmoreira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 20:13:47 by fmoreira          #+#    #+#             */
-/*   Updated: 2022/07/24 03:10:41 by fmoreira         ###   ########.fr       */
+/*   Updated: 2022/07/24 18:57:23 by fmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static void	ft_move_back(t_stack *stack_a, t_stack *stack_b, int num)
 	else
 		while (i++ < stack_b->n)
 			ft_rrm(stack_a, stack_b, 'b');
-	ft_pm(stack_a, stack_a, 'a');
+	ft_pm(stack_a, stack_b, 'a');
 }
 
 void	ft_medium_sort(t_stack *stack_a, t_stack *stack_b, int nb)
@@ -67,7 +67,7 @@ void	ft_medium_sort(t_stack *stack_a, t_stack *stack_b, int nb)
 	{
 		j = 0;
 		while (j++ < range)
-			ft_mov_blck(stack_a, stack_a, little + i * range,
+			ft_mov_blck(stack_a, stack_b, little + i * range,
 				little + (i + 1) * range);
 	}
 	if (stack_a->n > 1)
@@ -75,9 +75,9 @@ void	ft_medium_sort(t_stack *stack_a, t_stack *stack_b, int nb)
 		if (stack_a->n <= 3)
 			ft_micro_sort(stack_a, stack_b);
 		else
-			ft_little_sort(stack_a, stack_a);
+			ft_little_sort(stack_a, stack_b);
 	}
-	i = stack_a->n + 1;
+	i = stack_b->n + 1;
 	while (--i)
 		ft_move_back(stack_a, stack_b, i);
 }
@@ -94,7 +94,7 @@ void	ft_big_sort(t_stack *stack_a, t_stack *stack_b, int ns, int nb)
 	{
 		j = 0;
 		while (j++ < range)
-			ft_mov_blck(stack_a, stack_a, i * range, (i + 1) * range);
+			ft_mov_blck(stack_a, stack_b, i * range, (i + 1) * range);
 		ft_medium_sort_inv(stack_a, stack_b, nb, i * range + 1);
 	}
 	ft_medium_sort(stack_a, stack_b, nb);

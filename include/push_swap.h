@@ -6,7 +6,7 @@
 /*   By: fmoreira <fmoreira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 18:17:15 by fmoreira          #+#    #+#             */
-/*   Updated: 2022/07/24 03:15:56 by fmoreira         ###   ########.fr       */
+/*   Updated: 2022/07/24 16:08:33 by fmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-
-#define INT_MIN -2147483648
-#define	INT_MAX 2147483647
+# include <stdio.h>
 
 typedef struct s_stack
 {

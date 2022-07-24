@@ -6,7 +6,7 @@
 /*   By: fmoreira <fmoreira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 19:49:31 by fmoreira          #+#    #+#             */
-/*   Updated: 2022/07/24 03:04:38 by fmoreira         ###   ########.fr       */
+/*   Updated: 2022/07/24 17:13:50 by fmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	ft_pm(t_stack *stack_a, t_stack *stack_b, char c)
 	if (c == 'a')
 		ft_p_stack(stack_b, stack_a);
 	else
-		ft_p_stack(stack_a, stack_a);
+		ft_p_stack(stack_a, stack_b);
 	write(1, "p", 1);
 	write(1, &c, 1);
 	write(1, "\n", 1);
