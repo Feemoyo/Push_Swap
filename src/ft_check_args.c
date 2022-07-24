@@ -6,7 +6,7 @@
 /*   By: fmoreira <fmoreira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 20:20:46 by fmoreira          #+#    #+#             */
-/*   Updated: 2022/07/24 16:55:18 by fmoreira         ###   ########.fr       */
+/*   Updated: 2022/07/25 01:48:58 by fmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,16 +87,6 @@ static void	ft_replace_nums(t_stack *stack_a, t_stack *stack_b)
 		stack_a->array[i] = stack_b->array[i];
 }
 
-void	find_problem(t_stack *stack_a)
-{
-	int i;
-	
-	i = -1;
-	while (++i < stack_a->n)
-	{
-		printf("stack_a[%d]: %d\n", i, stack_a->array[i]);
-	}
-}
 int	ft_check_args(int n, char **args, t_stack *stack_a, t_stack *stack_b)
 {
 	if (ft_isnum(n, args))
