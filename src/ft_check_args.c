@@ -6,7 +6,7 @@
 /*   By: fmoreira <fmoreira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 20:20:46 by fmoreira          #+#    #+#             */
-/*   Updated: 2022/07/23 13:04:40 by fmoreira         ###   ########.fr       */
+/*   Updated: 2022/07/24 03:03:21 by fmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static int	ft_isint(int n, char **str, t_stack *stack)
 		num = ft_atod(*(str + i));
 		if (num < INT_MIN || num > INT_MAX)
 			return (1);
-		stack_array[i - 1] = (int)num;
+		stack->array[i - 1] = (int)num;
 	}
 	return (0);
 }
@@ -77,8 +77,8 @@ static void	ft_replace_nums(t_stack *stack_a, t_stack *stack_b)
 	{
 		j = -1;
 		count = 0;
-		while (++j < a->n)
-			if (a->array[i] > a->array[j])
+		while (++j < stack_b->n)
+			if (stack_a->array[i] > stack_a->array[j])
 				count++;
 		stack_b->array[i] = count + 1;
 	}

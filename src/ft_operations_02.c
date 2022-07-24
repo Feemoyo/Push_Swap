@@ -6,7 +6,7 @@
 /*   By: fmoreira <fmoreira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 19:49:31 by fmoreira          #+#    #+#             */
-/*   Updated: 2022/07/23 15:17:14 by fmoreira         ###   ########.fr       */
+/*   Updated: 2022/07/24 03:04:38 by fmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	ft_rm(t_stack *stack_a, t_stack *stack_b, char c)
 	write(1, "\n", 1);
 }
 
-void	ft_rrm(t_stack *stack_a, stack_b *stack_b, char c)
+void	ft_rrm(t_stack *stack_a, t_stack *stack_b, char c)
 {
 	if (c == 'a' || c == 'r')
 		ft_rr_stack(stack_a);

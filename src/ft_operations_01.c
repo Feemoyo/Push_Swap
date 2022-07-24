@@ -6,7 +6,7 @@
 /*   By: fmoreira <fmoreira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 19:49:31 by fmoreira          #+#    #+#             */
-/*   Updated: 2022/07/24 01:42:51 by fmoreira         ###   ########.fr       */
+/*   Updated: 2022/07/24 03:04:03 by fmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	ft_r_stack(t_stack *stack)
 	aux = stack->array[0];
 	while (++i < stack->n - 1)
 		stack->array[i] = stack->array[i + 1];
-	stack->array[i] = temp;
+	stack->array[i] = aux;
 }
 
 void	ft_rr_stack(t_stack *stack)
@@ -42,7 +42,7 @@ void	ft_rr_stack(t_stack *stack)
 	aux = stack->array[stack->n - 1];
 	while (--i > 0)
 		stack->array[i] = stack->array[i - 1];
-		stack->array[i] = aux;
+	stack->array[i] = aux;
 }
 
 void	ft_p_stack(t_stack *stack_sender, t_stack *stack_recipient)
